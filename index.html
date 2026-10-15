@@ -201,6 +201,17 @@ footer{padding:2.5rem 0 3rem;border-top:1px solid var(--line);font-size:.9rem;co
 .lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 .src-note{font-size:.9rem;color:var(--soft);margin-bottom:1rem}
 .src-note:empty{display:none}
+.gi{margin-top:1.5rem;background:var(--glow-tint);border-radius:22px;padding:1.6rem 1.7rem}
+.gi-head{display:flex;gap:1rem;align-items:center;margin-bottom:1rem}
+.gi-book{font-size:2.6rem;line-height:1}
+.gi-kicker{margin:0;font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--soft)}
+.gi h3{font-size:1.6rem;margin:0}
+.gi-ideas{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.9rem;margin:1.25rem 0}
+.gi-ideas div{background:var(--surface);border-radius:16px;padding:1rem 1.1rem}
+.gi-ideas h4{margin:0 0 .35rem;font-size:1.02rem}
+.gi-ideas p{margin:0;color:var(--soft);font-size:.97rem}
+.gi-cta{margin:0;font-size:1.05rem}
+.gi-cta a{color:var(--harm);font-weight:700}
 </style>
 </head>
 <body>
@@ -360,6 +371,18 @@ footer{padding:2.5rem 0 3rem;border-top:1px solid var(--line);font-size:.9rem;co
       <div class="tool"><div class="em" aria-hidden="true">⭐</div><h3 data-i18n="k5h"></h3><p data-i18n="k5p"></p><q data-i18n="k5q"></q></div>
       <div class="tool"><div class="em" aria-hidden="true">🧠</div><h3 data-i18n="k6h"></h3><p data-i18n="k6p"></p></div>
     </div>
+    <div class="gi">
+      <div class="gi-head"><div class="gi-book" aria-hidden="true">📗</div><div><p class="gi-kicker" data-i18n="gi_kicker"></p><h3 data-i18n="gi_h"></h3></div></div>
+      <p data-i18n="gi_p1"></p>
+      <p data-i18n="gi_p2"></p>
+      <div class="gi-ideas">
+        <div><h4 data-i18n="gi_1h"></h4><p data-i18n="gi_1p"></p></div>
+        <div><h4 data-i18n="gi_2h"></h4><p data-i18n="gi_2p"></p></div>
+        <div><h4 data-i18n="gi_3h"></h4><p data-i18n="gi_3p"></p></div>
+        <div><h4 data-i18n="gi_4h"></h4><p data-i18n="gi_4p"></p></div>
+      </div>
+      <p class="gi-cta" data-i18n="gi_cta"></p>
+    </div>
     <div class="repair">
       <h3 data-i18n="rep_h"></h3>
       <p data-i18n="rep_p1"></p>
@@ -391,6 +414,7 @@ footer{padding:2.5rem 0 3rem;border-top:1px solid var(--line);font-size:.9rem;co
       <li>Sege, R. D., &amp; Siegel, B. S. (2018). Effective discipline to raise healthy children. <i>Pediatrics, 142</i>(6), e20183112. American Academy of Pediatrics policy statement.</li>
       <li>Webb, W. J. (2011). <i>Corporal Punishment in the Bible</i>. InterVarsity Press. Greven, P. (1991). <i>Spare the Child</i>. Knopf.</li>
       <li>UN Committee on the Rights of the Child (2006). General Comment No. 8. World Health Organization (2025). Corporal punishment and health, fact sheet.</li>
+      <li>Kennedy, B. (2022). <i>Good Inside: A Guide to Becoming the Parent You Want to Be</i>. Harper Wave.</li>
       <li>Felitti, V. J., et al. (1998). Relationship of childhood abuse and household dysfunction to many of the leading causes of death in adults: The Adverse Childhood Experiences (ACE) Study. <i>American Journal of Preventive Medicine, 14</i>(4), 245–258.</li>
       <li>Global Initiative to End All Corporal Punishment of Children (2025). Countdown to universal prohibition.</li>
     </ol></div>
@@ -452,6 +476,15 @@ rep_q:"“I hit you yesterday. That was wrong, and it wasn’t your fault. I’m
 rep_p2:"And if you were the child who was hit: what you feel about it makes sense. Many adults find that understanding where their patterns came from is the first step in not passing them on.",
 src_h2:"Sources 📚", src_note:"",
 footer:"Compiled by Chris Wise from peer-reviewed research and international policy sources. Last reviewed October 2026. This page is educational and is not a substitute for advice from a pediatrician or therapist. If you are worried that a child is being hurt, contact your local child protection service.",
+gi_kicker:"The book to read next",
+gi_h:"<i>Good Inside</i>, by Dr. Becky Kennedy",
+gi_p1:"Clinical psychologist Becky Kennedy spent years teaching parents the standard model of timeouts and sticker charts, then stopped believing in it. Her approach starts from one idea: your child is good inside, even mid-meltdown. Hard behavior is a sign of a feeling that’s too big or a skill that isn’t built yet. It is not a verdict on who the child is.",
+gi_p2:"That is exactly where spanking goes wrong. A young child can’t separate “I did something bad” from “I am bad.” When the person they love most answers their struggle with pain, the lesson that sinks in is that something is wrong with them. <i>Good Inside</i> is built to teach the opposite lesson.",
+gi_1h:"🧒 The child is not the behavior", gi_1p:"Separate who your child is from what they did. You can stop the behavior firmly while making sure they know they are still good.",
+gi_2h:"✈️ Be the sturdy leader", gi_2p:"Kids need a parent who stays calm and in charge, like a pilot steadying the plane while the passengers panic. A boundary is something you do to keep everyone safe, not a threat or a punishment.",
+gi_3h:"🌊 Deeply feeling kids", gi_3p:"Kennedy writes specifically about children who feel everything intensely: the same “orchid” kids the research shows are hurt most by harshness.",
+gi_4h:"🩹 Repair above all", gi_4p:"She calls repair the most important skill in any relationship. Coming back after you’ve lost it teaches a child that relationships survive hard moments.",
+gi_cta:"📖 Read <i>Good Inside: A Guide to Becoming the Parent You Want to Be</i> (Harper Wave, 2022). For young kids, her picture book <i>That’s My Truck!</i> is about hitting. More tools at <a href='https://www.goodinside.com' target='_blank' rel='noopener'>goodinside.com</a>.",
 dims:["Threat response","Stress load","Emotional health","Trust","Aggression","Adult risk"],
 myths:[
  {claim:"Spanking works.", verdict:"It works for minutes, then backfires.", body:"Spanking can stop a behavior in the moment. In a small study that audio-recorded 33 families at home, children were misbehaving again within ten minutes after 30 of 41 spankings (73%). Over months and years, the pattern reverses: across 69 long-term studies, spanking predicted more behavior problems, not fewer.", src:"Holden et al., 2014; Heilmann et al., The Lancet, 2021"},
@@ -561,6 +594,15 @@ rep_q:"“Ayer te pegué. Estuvo mal, y no fue tu culpa. Estoy aprendiendo mejor
 rep_p2:"Y si tú fuiste el niño al que le pegaban: lo que sientes al respecto tiene sentido. Muchos adultos descubren que entender de dónde vienen sus patrones es el primer paso para no transmitirlos.",
 src_h2:"Fuentes 📚", src_note:"Las referencias se mantienen en su idioma original (inglés).",
 footer:"Recopilado por Chris Wise a partir de investigación revisada por pares y fuentes de políticas internacionales. Última revisión: octubre de 2026. Esta página es educativa y no sustituye el consejo de un pediatra o terapeuta. Si te preocupa que un niño esté siendo lastimado, contacta al servicio local de protección infantil.",
+gi_kicker:"El libro para leer después",
+gi_h:"<i>Good Inside</i> (“Buenos por dentro”), de la Dra. Becky Kennedy",
+gi_p1:"La psicóloga clínica Becky Kennedy pasó años enseñando a padres el modelo tradicional de tiempos fuera y tablas de estrellitas, y luego dejó de creer en él. Su enfoque parte de una idea: tu hijo es bueno por dentro, incluso en plena rabieta. La conducta difícil es señal de una emoción demasiado grande o de una habilidad que todavía no se ha construido. No es un veredicto sobre quién es el niño.",
+gi_p2:"Justo ahí es donde las nalgadas fallan. Un niño pequeño no puede separar “hice algo malo” de “soy malo”. Cuando la persona que más quiere responde a su dificultad con dolor, la lección que se le queda es que algo anda mal con él. <i>Good Inside</i> está hecho para enseñar la lección contraria.",
+gi_1h:"🧒 El niño no es su conducta", gi_1p:"Separa quién es tu hijo de lo que hizo. Puedes frenar la conducta con firmeza y, al mismo tiempo, dejarle claro que sigue siendo bueno.",
+gi_2h:"✈️ Sé un líder firme y sereno", gi_2p:"Los niños necesitan un padre que se mantenga tranquilo y al mando, como un piloto que estabiliza el avión mientras los pasajeros entran en pánico. Un límite es algo que tú haces para mantener a todos seguros, no una amenaza ni un castigo.",
+gi_3h:"🌊 Niños que sienten profundamente", gi_3p:"Kennedy escribe específicamente sobre los niños que sienten todo con mucha intensidad: los mismos niños “orquídea” que, según la investigación, más sufren con la dureza.",
+gi_4h:"🩹 Reparar, antes que nada", gi_4p:"Ella considera la reparación la habilidad más importante en cualquier relación. Volver después de haber perdido el control le enseña al niño que las relaciones sobreviven a los momentos difíciles.",
+gi_cta:"📖 Lee <i>Good Inside: A Guide to Becoming the Parent You Want to Be</i> (Harper Wave, 2022). Para niños pequeños, su libro ilustrado <i>That’s My Truck!</i> trata sobre pegar. Más herramientas en <a href='https://www.goodinside.com' target='_blank' rel='noopener'>goodinside.com</a> (en inglés).",
 dims:["Respuesta a amenazas","Carga de estrés","Salud emocional","Confianza","Agresión","Riesgo adulto"],
 myths:[
  {claim:"Las nalgadas funcionan.", verdict:"Funcionan por unos minutos y luego se vuelven en contra.", body:"Una nalgada puede detener una conducta en el momento. En un estudio pequeño que grabó el audio de 33 familias en casa, los niños volvían a portarse mal en menos de diez minutos después de 30 de 41 nalgadas (73%). A lo largo de meses y años, el patrón se invierte: en 69 estudios a largo plazo, las nalgadas predijeron más problemas de conducta, no menos.", src:"Holden et al., 2014; Heilmann et al., The Lancet, 2021"},
@@ -670,6 +712,15 @@ rep_q:"“Ontem eu bati em você. Foi errado, e não foi culpa sua. Estou aprend
 rep_p2:"E se você foi a criança que apanhava: o que você sente sobre isso faz sentido. Muitos adultos descobrem que entender de onde vêm seus padrões é o primeiro passo para não repassá-los.",
 src_h2:"Fontes 📚", src_note:"As referências estão no idioma original (inglês).",
 footer:"Compilado por Chris Wise a partir de pesquisas revisadas por pares e fontes de políticas internacionais. Última revisão: outubro de 2026. Esta página é educativa e não substitui a orientação de um pediatra ou terapeuta. Se você está preocupado que uma criança esteja sendo machucada, procure o serviço local de proteção à infância (no Brasil, o Disque 100 ou o Conselho Tutelar).",
+gi_kicker:"O livro para ler a seguir",
+gi_h:"<i>Good Inside</i> (“Bons por dentro”), da Dra. Becky Kennedy",
+gi_p1:"A psicóloga clínica Becky Kennedy passou anos ensinando pais o modelo tradicional de tempo de pausa e quadros de estrelinhas, e depois deixou de acreditar nele. A abordagem dela parte de uma ideia: seu filho é bom por dentro, mesmo no meio de uma birra. Um comportamento difícil é sinal de uma emoção grande demais ou de uma habilidade que ainda não foi construída. Não é um veredito sobre quem a criança é.",
+gi_p2:"É justamente aí que a palmada falha. Uma criança pequena não consegue separar “eu fiz algo ruim” de “eu sou ruim”. Quando a pessoa que ela mais ama responde à dificuldade dela com dor, a lição que fica é que existe algo errado com ela. <i>Good Inside</i> foi feito para ensinar a lição oposta.",
+gi_1h:"🧒 A criança não é o comportamento", gi_1p:"Separe quem seu filho é do que ele fez. Você pode interromper o comportamento com firmeza e, ao mesmo tempo, deixar claro que ele continua sendo bom.",
+gi_2h:"✈️ Seja uma liderança firme e serena", gi_2p:"As crianças precisam de um pai ou mãe que fique calmo e no comando, como um piloto que estabiliza o avião enquanto os passageiros entram em pânico. Um limite é algo que você faz para manter todos seguros, não uma ameaça nem um castigo.",
+gi_3h:"🌊 Crianças que sentem profundamente", gi_3p:"Kennedy escreve especificamente sobre crianças que sentem tudo com muita intensidade: as mesmas crianças “orquídea” que, segundo a pesquisa, mais sofrem com a dureza.",
+gi_4h:"🩹 Reparar acima de tudo", gi_4p:"Ela considera a reparação a habilidade mais importante de qualquer relacionamento. Voltar depois de ter perdido o controle ensina à criança que as relações sobrevivem aos momentos difíceis.",
+gi_cta:"📖 Leia <i>Good Inside: A Guide to Becoming the Parent You Want to Be</i> (Harper Wave, 2022). Para crianças pequenas, o livro ilustrado dela <i>That’s My Truck!</i> fala sobre bater. Mais ferramentas em <a href='https://www.goodinside.com' target='_blank' rel='noopener'>goodinside.com</a> (em inglês).",
 dims:["Resposta a ameaças","Carga de estresse","Saúde emocional","Confiança","Agressividade","Risco na vida adulta"],
 myths:[
  {claim:"Palmada funciona.", verdict:"Funciona por alguns minutos e depois sai pela culatra.", body:"Uma palmada pode interromper um comportamento na hora. Em um estudo pequeno que gravou o áudio de 33 famílias em casa, as crianças voltaram a se comportar mal em menos de dez minutos depois de 30 de 41 palmadas (73%). Ao longo de meses e anos, o padrão se inverte: em 69 estudos de longo prazo, as palmadas previram mais problemas de comportamento, não menos.", src:"Holden et al., 2014; Heilmann et al., The Lancet, 2021"},
