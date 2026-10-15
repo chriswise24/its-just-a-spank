@@ -201,6 +201,14 @@ footer{padding:2.5rem 0 3rem;border-top:1px solid var(--line);font-size:.9rem;co
 .lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 .src-note{font-size:.9rem;color:var(--soft);margin-bottom:1rem}
 .src-note:empty{display:none}
+.lang-big{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.1rem;background:var(--surface);border:2px solid var(--ink);border-radius:18px;padding:.9rem 1.1rem;margin-bottom:2.5rem;max-width:46rem}
+.lang-big-label{margin:0;font-weight:700;font-size:1rem}
+.lang-big-label span{color:var(--soft);font-weight:400;padding:0 .2rem}
+.lang-big-btns{display:flex;flex-wrap:wrap;gap:.5rem}
+.lang-big-btns button{border:2px solid var(--line);background:var(--bg);border-radius:999px;padding:.55rem 1.25rem;min-height:44px;font-size:1.05rem;font-weight:700}
+.lang-big-btns button:hover{border-color:var(--ink)}
+.lang-big-btns button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.lang-globe{align-self:center;padding:0 .25rem 0 .45rem;font-size:1rem}
 .gi{margin-top:1.5rem;background:var(--glow-tint);border-radius:22px;padding:1.6rem 1.7rem}
 .gi-head{display:flex;gap:1rem;align-items:center;margin-bottom:1rem}
 .gi-book{font-size:2.6rem;line-height:1}
@@ -228,7 +236,7 @@ footer{padding:2.5rem 0 3rem;border-top:1px solid var(--line);font-size:.9rem;co
       <li><a href="#instead" data-i18n="n_instead"></a></li>
       <li><a href="#sources" data-i18n="n_sources"></a></li>
     </ul>
-    <div class="lang" role="group" aria-label="Language / Idioma">
+    <div class="lang" role="group" aria-label="Language / Idioma"><span class="lang-globe" aria-hidden="true">🌐</span>
       <button type="button" data-lang="en" lang="en" aria-label="English">EN</button>
       <button type="button" data-lang="es" lang="es" aria-label="Español">ES</button>
       <button type="button" data-lang="pt" lang="pt" aria-label="Português">PT</button>
@@ -238,6 +246,14 @@ footer{padding:2.5rem 0 3rem;border-top:1px solid var(--line);font-size:.9rem;co
 
 <header class="hero">
   <div class="wide">
+    <div class="lang-big" role="group" aria-label="Choose your language / Elige tu idioma / Escolha seu idioma">
+      <p class="lang-big-label">🌐 Choose your language <span>/</span> Elige tu idioma <span>/</span> Escolha seu idioma</p>
+      <div class="lang-big-btns">
+        <button type="button" data-lang="en" lang="en">English</button>
+        <button type="button" data-lang="es" lang="es">Español</button>
+        <button type="button" data-lang="pt" lang="pt">Português</button>
+      </div>
+    </div>
     <h1><span class="q" data-i18n="hero_h1"></span></h1>
     <p class="ask" data-i18n="hero_ask"></p>
     <div class="facts">
@@ -949,11 +965,11 @@ function setLang(l){
   document.title=t.title;
   document.querySelector('meta[name="description"]').setAttribute("content",t.metaDesc);
   document.querySelectorAll("[data-i18n]").forEach(el=>{ el.innerHTML=t[el.dataset.i18n]; });
-  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l?"true":"false"));
+  document.querySelectorAll("button[data-lang]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l?"true":"false"));
   try{ const u=new URL(location.href); u.searchParams.set("lang",l); history.replaceState(null,"",u); }catch(e){}
   renderMyths(); labelLayers(); showLayer(state.layer); labelDims(); setDose(state.dose); labelMap(); setYear(state.year);
 }
-document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
+document.querySelectorAll("button[data-lang]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
 
 buildLayers(); buildDose();
 setLang(pickLang());
